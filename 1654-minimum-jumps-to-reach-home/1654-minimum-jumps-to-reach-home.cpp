@@ -1,8 +1,8 @@
 class Solution {
 public:
-    int memo[10005][2];
+    int memo[7005][2];
     int dp(int i, int j, int k, int a, int b, map<int, int> &m) {
-        if(i < 0 || i > 1e4 || k > 6000) {
+        if(i < 0 || i > 7e3 || k > 6000) {
             return 1e6;
         }
         if(memo[i][j] != -1) {
