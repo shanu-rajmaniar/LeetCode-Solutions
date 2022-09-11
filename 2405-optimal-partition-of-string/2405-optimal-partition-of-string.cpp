@@ -12,7 +12,6 @@ public:
                 last = i;
             }
         }
-        if(!cnt.empty()) ans++;
-        return ans;
+        return ++ans;
     }
 };
