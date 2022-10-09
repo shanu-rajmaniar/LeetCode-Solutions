@@ -9,7 +9,7 @@ public:
         for(int i = 1; i < 26; i++) {
             v[i] += v[i - 1];
         }
-        string ans = "", t = "";
+        string ans, t;
         for(int i = 0; i < n; i++) {
             char c = s[i];
             t.push_back(c);
