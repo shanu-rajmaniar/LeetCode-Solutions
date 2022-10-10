@@ -7,7 +7,7 @@ public:
     int pos1, pos2;
     void rec(int i, int end, int len, vector<string> &path, vector<int> &used) {
         path.push_back(words[i]);
-        if(path.size() > len || path.size() + dis[i] > len) {
+        if(path.size() + dis[i] > len) {
             return;
         }
         if(i == end) { 
