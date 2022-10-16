@@ -10,7 +10,7 @@ public:
         int tot = accumulate(begin(nums), end(nums), 0);
         int cnt;
         bool f;
-        function<int(int, int, int)> dfs = [&] (int nn, int pp, const int &pos) {
+        function<int(int, int, int)> dfs = [&] (int nn, int pp, int pos) {
             int sum = nums[nn];
             for(auto x : g[nn]) {
                 if(x != pp) {
