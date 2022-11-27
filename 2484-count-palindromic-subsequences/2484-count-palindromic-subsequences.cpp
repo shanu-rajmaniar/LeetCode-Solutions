@@ -2,7 +2,7 @@ using ll = long long;
 const ll mod = 1e9 + 7;
 class Solution {
 public:
-    ll memo[10005][6][11][11];
+    ll memo[10005][6][10][10];
     int countPalindromes(string st) {
         int n = st.size();
         memset(memo, -1, sizeof(memo));
