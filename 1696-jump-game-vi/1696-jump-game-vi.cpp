@@ -6,8 +6,7 @@ public:
         int dp[n];
         0[dp] = nums[0];
         for(int i = 1; i < n; i++) {
-            auto it = s.end(); it--;
-            i[dp] = nums[i] + *it;
+            i[dp] = nums[i] + *s.rbegin();
             s.insert(i[dp]);
             if(s.size() > k) {
                 s.erase(s.find(dp[i - k]));   
