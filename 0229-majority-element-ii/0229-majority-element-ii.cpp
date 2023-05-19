@@ -2,7 +2,7 @@ class Solution {
 public:
     vector<int> majorityElement(vector<int>& nums) {
         int n = nums.size();
-        int ans1 = 0, cnt1 = 0, ans2 = 0, cnt2 = 0;
+        int ans1 = 1e9 + 1, cnt1 = 0, ans2 = 1e9 + 1, cnt2 = 0;
         for(int i = 0; i < n; i++) {
             if(ans1 == nums[i]) {
                 cnt1++;
@@ -22,7 +22,7 @@ public:
         if(count(nums.begin(), nums.end(), ans1) > n / 3) {
             ans.push_back(ans1);
         }
-        if(ans1 != ans2 && count(nums.begin(), nums.end(), ans2) > n / 3) {
+        if(count(nums.begin(), nums.end(), ans2) > n / 3) {
             ans.push_back(ans2);
         }
         return ans;
