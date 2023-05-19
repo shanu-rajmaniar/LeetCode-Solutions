@@ -10,8 +10,8 @@ public:
             }
             else cnt--;
             if(cnt == 0) {
-                ans = nums[i];
-                cnt = 1;
+                ans = nums[i + 1];
+                cnt = 0;
             }
         }
         return ans;
