@@ -1,9 +1,6 @@
 struct Node {
     int val;
     Node *next = nullptr, *prev = nullptr;
-    Node() : val(0), next(nullptr) {}
-    Node(int x) : val(x), next(nullptr) {}
-    Node(int x, Node *next) : val(x), next(next) {}
 };
 class LRUCache {
 public:
