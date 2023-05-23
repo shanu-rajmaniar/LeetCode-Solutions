@@ -1,8 +1,11 @@
 class Solution {
 public:
     int findKthLargest(vector<int>& nums, int k) {
+        random_device rd;
+        mt19937 gen(rd());
+        uniform_int_distribution<int> dist(0, size(nums) - 1);
         vector<int> l, m, r;
-        int x = nums[0];
+        int x = nums[dist(gen)];
         for(int i = 0; i < size(nums); i++) {
             if(nums[i] < x) r.push_back(nums[i]);
             else if(nums[i] == x) m.push_back(nums[i]);
