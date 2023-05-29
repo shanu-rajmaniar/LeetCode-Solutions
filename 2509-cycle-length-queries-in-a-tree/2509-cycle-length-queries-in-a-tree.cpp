@@ -8,13 +8,13 @@ public:
             int x = 0;
             while(log2(a) != log2(b)) {
                 x++;
-                if(a > b) a /= 2;
-                else b /= 2;
+                if(a > b) a >>= 1;
+                else b >>= 1;
             }
             int y = 0;
             while(a != b) {
                 y++;
-                a /= 2; b/= 2;
+                a >>= 1; b >>= 1;
             }
             ans.push_back(x + y + 1);
         }
