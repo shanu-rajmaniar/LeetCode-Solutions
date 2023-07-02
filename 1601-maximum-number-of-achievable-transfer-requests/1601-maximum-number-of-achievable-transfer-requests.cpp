@@ -2,8 +2,9 @@ class Solution {
 public:
     int maximumRequests(int n, vector<vector<int>>& requests) {
         int m = size(requests), ans = 0;
+        int v[n];
         for(int i = 0; i < (1 << m); i++) {
-            vector<int> v(n);
+            memset(v, 0, sizeof(v));
             for(int j = 0; j < m; j++) {
                 if((i >> j) & 1) {
                     v[requests[j][0]]--;
