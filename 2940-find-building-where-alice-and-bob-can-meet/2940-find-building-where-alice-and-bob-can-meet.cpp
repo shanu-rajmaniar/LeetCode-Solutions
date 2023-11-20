@@ -1,6 +1,7 @@
 class SegTree {
-public:
+private:
     int arr[50005], t[2000020];
+public:
     SegTree(vector<int> vec) {
         int n = vec.size();
         for(int i = 1; i <= n; i++) {
